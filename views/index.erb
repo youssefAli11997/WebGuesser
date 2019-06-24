@@ -3,10 +3,12 @@
 <head>
 	<title>Web Guesser - Guess Numbers!</title>
 	<style type="text/css">
-		bod
+		body{
+			background-color: <%= bg_color %>
+		}
 	</style>
 </head>
-<body bgcolor= <%= bg_color %> >
+<body >
 	<form>
 		<input type="text" name="guess" />
 		<input type="submit" value="Guess!"/>

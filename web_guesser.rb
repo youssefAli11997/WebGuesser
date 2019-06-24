@@ -12,25 +12,25 @@ def check_guess(guess)
 			if $SECRET_NUMBER == guess
 				message = "Correct"
 				$correct = true
-				$bg_color = "'lime'"
+				$bg_color = "lime"
 			elsif $SECRET_NUMBER - guess > 30 && $SECRET_NUMBER - guess < 50
 				message = "Too Low"
-				$bg_color = "'lightcoral'"
+				$bg_color = "lightcoral"
 			elsif $SECRET_NUMBER - guess >= 50
 				message = "Way too Low"
-				$bg_color = "'red'"
+				$bg_color = "red"
 			elsif guess - $SECRET_NUMBER > 30 && guess - $SECRET_NUMBER < 50
 				message = "Too High"
-				$bg_color = "'lightcoral'"
+				$bg_color = "lightcoral"
 			elsif guess - $SECRET_NUMBER >= 50
 				message = "Way too High"
-				$bg_color = "'red'"
+				$bg_color = "red"
 			elsif $SECRET_NUMBER - guess <= 30 && $SECRET_NUMBER - guess >= 0
 				message = "Increase your guess!"
-				$bg_color = "'peachpuff'"
+				$bg_color = "peachpuff"
 			else
 				message = "Decrease your guess!"
-				$bg_color = "'peachpuff'"
+				$bg_color = "peachpuff"
 			end
 		end
 	rescue Exception => ex
