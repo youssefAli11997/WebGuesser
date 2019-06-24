@@ -4,6 +4,14 @@
 	<title>Web Guesser - Guess Numbers!</title>
 </head>
 <body>
-	The secret number is <%= number %>
+	<form>
+		<input type="text" name="guess" />
+		<input type="submit" value="Guess!"/>
+	</form>
+
+	<p><%= message %></p>
+	<% if correct %>
+		<p>The secret number is <%= number %></p>
+	<% end %>
 </body>
 </html>
