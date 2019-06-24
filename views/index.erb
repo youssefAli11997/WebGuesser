@@ -2,8 +2,11 @@
 <html>
 <head>
 	<title>Web Guesser - Guess Numbers!</title>
+	<style type="text/css">
+		bod
+	</style>
 </head>
-<body>
+<body bgcolor= <%= bg_color %> >
 	<form>
 		<input type="text" name="guess" />
 		<input type="submit" value="Guess!"/>
@@ -11,7 +14,7 @@
 
 	<p><%= message %></p>
 	<% if correct %>
-		<p>The secret number is <%= number %></p>
+	<p>The secret number is <%= number %></p>
 	<% end %>
 </body>
 </html>
