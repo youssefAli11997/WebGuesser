@@ -20,5 +20,9 @@
 	<% end %>
 
 	<p>Remaining Guesses: <%= available_guesses %></p>
+
+	<% if cheet == 'true' %>
+	<p>Cheet Mode Enabled! The secret number is <%= cheet_number %></p>
+	<% end %>
 </body>
 </html>

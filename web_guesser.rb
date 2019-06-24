@@ -65,10 +65,17 @@ end
 
 get '/'  do
 	guess = params['guess']
-	message = check_guess(guess)
-	erb :index, :locals => {:number => $old_number,
+	cheet = params['cheet']
+	if cheet != 'true'
+		message = check_guess(guess)
+	end
+	erb :index, :locals => {
+							:number => $old_number,
 							:message => message, 
 							:correct => $bg_color == "lime"? true : false,
 							:bg_color => $bg_color,
-							:available_guesses => $available_guesses}
+							:available_guesses => $available_guesses,
+							:cheet => cheet,
+							:cheet_number => $SECRET_NUMBER
+						}
 end
